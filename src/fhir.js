@@ -81,7 +81,11 @@
             prevPage: GET.and(bundle.$$BundleLinkUrl("previous")).and(bundle.$$BundleLinkUrl("prev")).end(http),
             getBundleByUrl: GET.and(Path(":url")).end(http),
             resolve: GET.and(refs.resolve).end(http),
-            patch: PATCH.and(resourcePath).and($$Header('Content-Type', 'application/json-patch+json')).end(http)
+            patch: PATCH.and(resourcePath).and($$Header('Content-Type', 'application/json-patch+json')).end(http),
+            expunge: POST.and(resourceTypePath.slash(":id").slash("$expunge")).end(http),
+            expungeAllResource: POST.and(resourceTypePath.slash("$expunge")).end(http),
+            expungeAll: POST.and(BaseUrl.slash("$expunge")).end(http),
+            everything: GET.and(resourceTypePath.slash(":id").slash("$everything")).end(http),
         }, adapter);
     };
     module.exports = fhir;

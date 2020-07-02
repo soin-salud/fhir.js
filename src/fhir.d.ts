@@ -45,5 +45,9 @@ declare namespace fhirClient {
     prevPage: ClientFn
     resolve: ClientFn
     patch: typeof Patch
+    expunge: ClientFn
+    expungeAllResource: ClientFn
+    expungeAll: ClientFn
+    everything: ClientFn
   }
 }
