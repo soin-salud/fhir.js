@@ -1,6 +1,6 @@
 {
   "name": "@soinsalud/fhir.js",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "devDependencies": {
     "angular": "~1.4.0",
     "babel-polyfill": "^6.7.4",
